@@ -1,0 +1,25 @@
+-------------------------------------
+<prompt>
+mkdir lee // 폴더 (lee) 생성
+cd lee    // (lee) 폴더 실행
+notepad add.c // (lee) 폴더에서 add.c 라는 이름의 메모장 파일 만들기
+notepad mymath.lib 
+--------------------------------------
+<add.c> / <mymath.lib>
+#include <stdio.h>
+int add(int a, int b){
+  return(a+b);
+}
+void main(){
+  printf("%d\n" , add(22,33));
+}
+
+---------------------------------------
+<prompt>
+cl/c add.c // add.obj 생성 
+cl/c mymath.lib
+lib /OUT:mymath.lib add.obj
+link add mymath 
+add
+
+55
